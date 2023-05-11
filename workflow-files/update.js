@@ -1,9 +1,4 @@
 (async () => {
-    function add(tbl, tbl2) {
-        for (const property of tbl) {
-           tbl2.push(property)
-        }
-     }
     const args = process.argv.slice(2);
     const adder = JSON.parse(args[0]);
     const output = args[1];
