@@ -152,7 +152,7 @@ jobs:
           run: git clone https://github.com/fheahdythdr/rco-fflags
         - name: Run nodejs file
           id: update_fflags
-          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FString\"]}]' /rco-fflags/FString and FInt/ClientAppSettings.json"
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FString\"]}]' \"/rco-fflags/FString and FInt/ClientAppSettings.json\""
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
