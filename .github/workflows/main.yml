@@ -1,0 +1,213 @@
+name: Auto-Update FFlags
+on:
+  schedule:
+    - cron: '* * * * *'
+jobs:
+  update-fflags:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3.5.2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
+      - name: Setup SSH key
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.sshprivate }}
+      - name: Set git email
+        run: git config --global user.email ${{ secrets.gitemail }}
+      - name: Set git user
+        run: git config --global user.name ${{ secrets.gituser }}
+      - name: Clone repo
+        run: git clone https://github.com/fheahdythdr/rco-fflags
+      - name: Run nodejs file
+        id: update_fflags
+        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\"]}]' ./rco-fflags/FFlags/ClientAppSettings.json"
+      - name: Add changed file, commit and push to repo
+        continue-on-error: true
+        run: |
+          git add ./rco-fflags/FFlags/ClientAppSettings.json
+          git commit -m "Updated FFlags"
+          git push origin main
+  update-fflags-fints:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3.5.2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
+      - name: Setup SSH key
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.sshprivate }}
+      - name: Set git email
+        run: git config --global user.email ${{ secrets.gitemail }}
+      - name: Set git user
+        run: git config --global user.name ${{ secrets.gituser }}
+      - name: Clone repo
+        run: git clone https://github.com/fheahdythdr/rco-fflags
+      - name: Run nodejs file
+        id: update_fflags
+        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\"]}]' ./rco-fflags/FInt and FFlag/ClientAppSettings.json"
+      - name: Add changed file, commit and push to repo
+        continue-on-error: true
+        run: |
+          git add ./rco-fflags/FInt and FFlag/ClientAppSettings.json
+          git commit -m "Updated FFlags"
+          git push origin main
+  update-fflags-fpsunlock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3.5.2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
+      - name: Setup SSH key
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.sshprivate }}
+      - name: Set git email
+        run: git config --global user.email ${{ secrets.gitemail }}
+      - name: Set git user
+        run: git config --global user.name ${{ secrets.gituser }}
+      - name: Clone repo
+        run: git clone https://github.com/fheahdythdr/rco-fflags
+      - name: Run nodejs file
+        id: update_fflags
+        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\"]},{\"tbl\": \"values\", \"values\": [500]}]' ./rco-fflags/FFlag and FPS Unlock/ClientAppSettings.json"
+      - name: Add changed file, commit and push to repo
+        continue-on-error: true
+        run: |
+          git add ./rco-fflags/FFlag and FPS Unlock/ClientAppSettings.json
+          git commit -m "Updated FFlags"
+          git push origin main
+  update-fflags-fints-fstrings:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3.5.2
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v2.5.2
+        - name: Setup SSH key
+          uses: webfactory/ssh-agent@v0.8.0
+          with:
+            ssh-private-key: ${{ secrets.sshprivate }}
+        - name: Set git email
+          run: git config --global user.email ${{ secrets.gitemail }}
+        - name: Set git user
+          run: git config --global user.name ${{ secrets.gituser }}
+        - name: Clone repo
+          run: git clone https://github.com/fheahdythdr/rco-fflags
+        - name: Run nodejs file
+          id: update_fflags
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\", \"FString\"]}]' ./rco-fflags/All/ClientAppSettings.json"
+        - name: Add changed file, commit and push to repo
+          continue-on-error: true
+          run: |
+            git add ./rco-fflags/All/ClientAppSettings.json
+            git commit -m "Updated FFlags"
+            git push origin main
+  update-fflags-fstrings:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3.5.2
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v2.5.2
+        - name: Setup SSH key
+          uses: webfactory/ssh-agent@v0.8.0
+          with:
+            ssh-private-key: ${{ secrets.sshprivate }}
+        - name: Set git email
+          run: git config --global user.email ${{ secrets.gitemail }}
+        - name: Set git user
+          run: git config --global user.name ${{ secrets.gituser }}
+        - name: Clone repo
+          run: git clone https://github.com/fheahdythdr/rco-fflags
+        - name: Run nodejs file
+          id: update_fflags
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FString\"]}]' ./rco-fflags/FString and FFlag/ClientAppSettings.json"
+        - name: Add changed file, commit and push to repo
+          continue-on-error: true
+          run: |
+            git add ./rco-fflags/FString and FFlag/ClientAppSettings.json
+            git commit -m "Updated FFlags"
+            git push origin main
+  update-fints-fstrings:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3.5.2
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v2.5.2
+        - name: Setup SSH key
+          uses: webfactory/ssh-agent@v0.8.0
+          with:
+            ssh-private-key: ${{ secrets.sshprivate }}
+        - name: Set git email
+          run: git config --global user.email ${{ secrets.gitemail }}
+        - name: Set git user
+          run: git config --global user.name ${{ secrets.gituser }}
+        - name: Clone repo
+          run: git clone https://github.com/fheahdythdr/rco-fflags
+        - name: Run nodejs file
+          id: update_fflags
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FString\"]}]' ./rco-fflags/FString and FInt/ClientAppSettings.json"
+        - name: Add changed file, commit and push to repo
+          continue-on-error: true
+          run: |
+            git add ./rco-fflags/FString and FInt/ClientAppSettings.json
+            git commit -m "Updated FFlags"
+            git push origin main
+  update-fints:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3.5.2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
+      - name: Setup SSH key
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.sshprivate }}
+      - name: Set git email
+        run: git config --global user.email ${{ secrets.gitemail }}
+      - name: Set git user
+        run: git config --global user.name ${{ secrets.gituser }}
+      - name: Clone repo
+        run: git clone https://github.com/fheahdythdr/rco-fflags
+      - name: Run nodejs file
+        id: update_fflags
+        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInts\"]}]' ./rco-fflags/FInt/ClientAppSettings.json"
+      - name: Add changed file, commit and push to repo
+        continue-on-error: true
+        run: |
+          git add ./rco-fflags/FInt/ClientAppSettings.json
+          git commit -m "Updated FFlags"
+          git push origin main
+  update-fstrings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3.5.2
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.5.2
+      - name: Setup SSH key
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.sshprivate }}
+      - name: Set git email
+        run: git config --global user.email ${{ secrets.gitemail }}
+      - name: Set git user
+        run: git config --global user.name ${{ secrets.gituser }}
+      - name: Clone repo
+        run: git clone https://github.com/fheahdythdr/rco-fflags
+      - name: Run nodejs file
+        id: update_fflags
+        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FString\"]}]' ./rco-fflags/FString/ClientAppSettings.json"
+      - name: Add changed file, commit and push to repo
+        continue-on-error: true
+        run: |
+          git add ./rco-fflags/FString/ClientAppSettings.json
+          git commit -m "Updated FFlags"
+          git push origin main
