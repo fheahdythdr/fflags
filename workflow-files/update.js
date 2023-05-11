@@ -2,7 +2,7 @@
     const args = process.argv.slice(2);
     const path = require("path")
     const adder = JSON.parse(args[0]);
-    const output = path.join(args[1].replace("./", path.join('/' + __dirname + '/../../..')), args[1].replace('./', ''))
+    const output = '/home/runner/work' + args[1];
     const names = [];
     const values = [];
     const includes = [];
