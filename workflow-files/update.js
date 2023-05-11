@@ -6,7 +6,7 @@
     const values = [];
     const includes = [];
     for (const item1 of adder) {
-        for (const item2 of adder.values) {
+        for (const item2 of item1.values) {
             if (item1.tbl == "names") names.push(item2);
             else if (item1.tbl == "values") values.push(item2);
             else if (item1.tbl == "includes") includes.push(item2);
