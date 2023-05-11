@@ -1,7 +1,7 @@
 (async () => {
     const args = process.argv.slice(2);
     const adder = JSON.parse(args[0]);
-    const output = args[1];
+    const output = args[1].replace("./", __dirname + '/');
     const names = [];
     const values = [];
     const includes = [];
