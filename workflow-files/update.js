@@ -2,9 +2,9 @@
     const args = process.argv.slice(2);
     const adder = JSON.parse(args[0]);
     const output = args[1];
-    const names = ["DFFlag"];
-    const values = [500];
-    const includes = ["FFlag"];
+    const names = [];
+    const values = [];
+    const includes = [];
     for (const item1 of adder) {
         for (const item2 of adder.values) {
             if (item1.tbl == "names") names.push(item2);
