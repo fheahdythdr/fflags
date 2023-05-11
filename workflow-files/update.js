@@ -9,7 +9,7 @@
         for (const item2 of adder.values) {
             if (item1.tbl == "names") names.push(item2);
             else if (item1.tbl == "values") values.push(item2);
-            else includes.push(item2);
+            else if (item1.tbl == "includes") includes.push(item2);
         }
     }
     const fs = require('fs')
