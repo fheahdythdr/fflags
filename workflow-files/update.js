@@ -1,19 +1,22 @@
 (async () => {
+    function add(tbl, tbl2) {
+        for (const property of tbl) {
+           tbl2.push(property)
+        }
+     }
     const args = process.argv.slice(2);
-    const namesadd = JSON.parse(args[0]);
-    const valuesadd = JSON.parse(args[1]);
-    const includesadd = JSON.parse(args[2]);
+    const adder = JSON.parse(args[0]);
+    const output = args[1];
     const names = ["DFFlag"];
     const values = [500];
     const includes = ["FFlag"];
-    function add(tbl, tbl2) {
-       for (const property of tbl) {
-          tbl2.push(property)
-       }
+    for (const item1 of adder) {
+        for (const item2 of adder.values) {
+            if (item1.tbl == "names") names.push(item2);
+            else if (item1.tbl == "values") values.push(item2);
+            else includes.push(item2);
+        }
     }
-    add(namesadd, names);
-    add(valuesadd, values);
-    add(includesadd, includes);
     const fs = require('fs')
     const data = await fetch("https://raw.githubusercontent.com/L8X/Roblox-Client-Optimizer/main/ClientAppSettings.json")
     const Settings = await data.json()
@@ -23,7 +26,7 @@
             New[name] = Settings[name];
         }
     }
-    if (fs.readFileSync('./rco-fflags/ClientAppSettings.json', 'utf8') != JSON.stringify(New)) {
-        fs.writeFileSync('./rco-fflags/ClientAppSettings.json', JSON.stringify(New));
+    if (fs.readFileSync(output, 'utf8') != JSON.stringify(New)) {
+        fs.writeFileSync(output, JSON.stringify(New));
     }
 })()
