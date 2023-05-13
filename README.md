@@ -1,0 +1,6 @@
+# rco-fflags
+fflag configurations i use with my rco fork
+
+to use them, simply go to C:\RCO2, create a file called custom_url.txt
+
+from there, go to one of the folders in this repo, go to their ClientAppSettings.json, click raw, then copy the url into custom_url.txt
