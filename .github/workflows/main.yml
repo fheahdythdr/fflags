@@ -26,8 +26,8 @@ jobs:
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add /rco-fflags/FFlags/ClientAppSettings.json
-          git commit -m "Updated FFlags"
+          git add rco-fflags/FFlags/ClientAppSettings.json
+          git commit -a -m "Updated FFlags"
           git push origin main
   update-fflags-fints:
     runs-on: ubuntu-latest
@@ -52,8 +52,8 @@ jobs:
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add "./rco-fflags/FInt and FFlag/ClientAppSettings.json"
-          git commit -m "Updated FFlags"
+          git add "rco-fflags/FInt and FFlag/ClientAppSettings.json"
+          git commit -a -m "Updated FFlags"
           git push origin main
   update-fflags-fpsunlock:
     runs-on: ubuntu-latest
@@ -78,8 +78,8 @@ jobs:
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add "./rco-fflags/FFlag and FPS Unlock/ClientAppSettings.json"
-          git commit -m "Updated FFlags"
+          git add "rco-fflags/FFlag and FPS Unlock/ClientAppSettings.json"
+          git commit -a -m "Updated FFlags"
           git push origin main
   update-fflags-fints-fstrings:
       runs-on: ubuntu-latest
@@ -104,8 +104,8 @@ jobs:
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
-            git add ./rco-fflags/All/ClientAppSettings.json
-            git commit -m "Updated FFlags"
+            git add rco-fflags/All/ClientAppSettings.json
+            git commit -a -m "Updated FFlags"
             git push origin main
   update-fflags-fstrings:
       runs-on: ubuntu-latest
@@ -130,8 +130,8 @@ jobs:
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
-            git add "./rco-fflags/FString and FFlag/ClientAppSettings.json"
-            git commit -m "Updated FFlags"
+            git add "rco-fflags/FString and FFlag/ClientAppSettings.json"
+            git commit -a -m "Updated FFlags"
             git push origin main
   update-fints-fstrings:
       runs-on: ubuntu-latest
@@ -156,8 +156,8 @@ jobs:
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
-            git add "./rco-fflags/FString and FInt/ClientAppSettings.json"
-            git commit -m "Updated FFlags"
+            git add "rco-fflags/FString and FInt/ClientAppSettings.json"
+            git commit -a -m "Updated FFlags"
             git push origin main
   update-fints:
     runs-on: ubuntu-latest
@@ -182,8 +182,8 @@ jobs:
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add /rco-fflags/FInt/ClientAppSettings.json
-          git commit -m "Updated FFlags"
+          git add rco-fflags/FInt/ClientAppSettings.json
+          git commit -a -m "Updated FFlags"
           git push origin main
   update-fstrings:
     runs-on: ubuntu-latest
@@ -208,6 +208,6 @@ jobs:
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add /rco-fflags/FString/ClientAppSettings.json
-          git commit -m "Updated FFlags"
+          git add rco-fflags/FString/ClientAppSettings.json
+          git commit -a -m "Updated FFlags"
           git push origin main
