@@ -22,7 +22,5 @@
             New[name] = Settings[name];
         }
     }
-    if (fs.readFileSync(output, 'utf8') != JSON.stringify(New)) {
-        fs.writeFileSync(output, JSON.stringify(New));
-    }
+    fs.writeFileSync(output, JSON.stringify(New));
 })()
