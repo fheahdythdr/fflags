@@ -27,6 +27,7 @@ jobs:
         continue-on-error: true
         run: |
           git add FFlags/ClientAppSettings.json
+          git pull
           git commit -a -m "Updated FFlags"
           git push origin main
   update-fflags-fints:
@@ -53,6 +54,7 @@ jobs:
         continue-on-error: true
         run: |
           git add "FInt and FFlag/ClientAppSettings.json"
+          git pull
           git commit -a -m "Updated FFlags"
           git push origin main
   update-fflags-fpsunlock:
@@ -79,6 +81,7 @@ jobs:
         continue-on-error: true
         run: |
           git add "FFlag and FPS Unlock/ClientAppSettings.json"
+          git pull
           git commit -a -m "Updated FFlags"
           git push origin main
   update-fflags-fints-fstrings:
@@ -105,7 +108,8 @@ jobs:
           continue-on-error: true
           run: |
             git add All/ClientAppSettings.json
-            git commit -a -m "Updated FFlags"
+            git pull
+          git commit -a -m "Updated FFlags"
             git push origin main
   update-fflags-fstrings:
       runs-on: ubuntu-latest
@@ -131,7 +135,8 @@ jobs:
           continue-on-error: true
           run: |
             git add "FString and FFlag/ClientAppSettings.json"
-            git commit -a -m "Updated FFlags"
+            git pull
+          git commit -a -m "Updated FFlags"
             git push origin main
   update-fints-fstrings:
       runs-on: ubuntu-latest
@@ -157,7 +162,8 @@ jobs:
           continue-on-error: true
           run: |
             git add "FString and FInt/ClientAppSettings.json"
-            git commit -a -m "Updated FFlags"
+            git pull
+          git commit -a -m "Updated FFlags"
             git push origin main
   update-fints:
     runs-on: ubuntu-latest
@@ -183,6 +189,7 @@ jobs:
         continue-on-error: true
         run: |
           git add FInt/ClientAppSettings.json
+          git pull
           git commit -a -m "Updated FFlags"
           git push origin main
   update-fstrings:
@@ -209,5 +216,6 @@ jobs:
         continue-on-error: true
         run: |
           git add FString/ClientAppSettings.json
+          git pull
           git commit -a -m "Updated FFlags"
           git push origin main
