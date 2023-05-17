@@ -26,8 +26,8 @@ jobs:
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add FFlags/ClientAppSettings.json
           git pull
+          git add FFlags/ClientAppSettings.json
           git commit -a -m "Updated FFlags"
           git push origin main
   update-fflags-fints:
@@ -53,8 +53,8 @@ jobs:
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add "FInt and FFlag/ClientAppSettings.json"
           git pull
+          git add "FInt and FFlag/ClientAppSettings.json"
           git commit -a -m "Updated FFlags"
           git push origin main
   update-fflags-fpsunlock:
@@ -80,8 +80,8 @@ jobs:
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add "FFlag and FPS Unlock/ClientAppSettings.json"
           git pull
+          git add "FFlag and FPS Unlock/ClientAppSettings.json"
           git commit -a -m "Updated FFlags"
           git push origin main
   update-fflags-fints-fstrings:
@@ -107,8 +107,8 @@ jobs:
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
-            git add All/ClientAppSettings.json
             git pull
+          git add All/ClientAppSettings.json
             git commit -a -m "Updated FFlags"
             git push origin main
   update-fflags-fstrings:
@@ -134,8 +134,8 @@ jobs:
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
-            git add "FString and FFlag/ClientAppSettings.json"
             git pull
+          git add "FString and FFlag/ClientAppSettings.json"
             git commit -a -m "Updated FFlags"
             git push origin main
   update-fints-fstrings:
@@ -161,8 +161,8 @@ jobs:
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
-            git add "FString and FInt/ClientAppSettings.json"
             git pull
+          git add "FString and FInt/ClientAppSettings.json"
             git commit -a -m "Updated FFlags"
             git push origin main
   update-fints:
@@ -188,8 +188,8 @@ jobs:
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add FInt/ClientAppSettings.json
           git pull
+          git add FInt/ClientAppSettings.json
           git commit -a -m "Updated FFlags"
           git push origin main
   update-fstrings:
@@ -215,7 +215,7 @@ jobs:
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add FString/ClientAppSettings.json
           git pull
+          git add FString/ClientAppSettings.json
           git commit -a -m "Updated FFlags"
           git push origin main
