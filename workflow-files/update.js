@@ -2,7 +2,7 @@
     const args = process.argv.slice(2);
     const path = require("path")
     const adder = JSON.parse(args[0]);
-    const output = '/home/runner/work/rco-fflags' + args[1];
+    const output = '/home/runner/work/rco-fflags/rco-fflags' + args[1];
     const names = [];
     const values = [];
     const includes = [];
