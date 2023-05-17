@@ -109,7 +109,7 @@ jobs:
           run: |
             git add All/ClientAppSettings.json
             git pull
-          git commit -a -m "Updated FFlags"
+            git commit -a -m "Updated FFlags"
             git push origin main
   update-fflags-fstrings:
       runs-on: ubuntu-latest
