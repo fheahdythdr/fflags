@@ -108,7 +108,7 @@ jobs:
           continue-on-error: true
           run: |
             git pull
-          git add All/ClientAppSettings.json
+            git add All/ClientAppSettings.json
             git commit -a -m "Updated FFlags"
             git push origin main
   update-fflags-fstrings:
@@ -135,7 +135,7 @@ jobs:
           continue-on-error: true
           run: |
             git pull
-          git add "FString and FFlag/ClientAppSettings.json"
+            git add "FString and FFlag/ClientAppSettings.json"
             git commit -a -m "Updated FFlags"
             git push origin main
   update-fints-fstrings:
@@ -162,7 +162,7 @@ jobs:
           continue-on-error: true
           run: |
             git pull
-          git add "FString and FInt/ClientAppSettings.json"
+            git add "FString and FInt/ClientAppSettings.json"
             git commit -a -m "Updated FFlags"
             git push origin main
   update-fints:
