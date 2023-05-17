@@ -22,11 +22,11 @@ jobs:
         run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
       - name: Run nodejs file
         id: update_fflags
-        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\"]}]' /rco-fflags/FFlags/ClientAppSettings.json"
+        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\"]}]' /FFlags/ClientAppSettings.json"
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add rco-fflags/FFlags/ClientAppSettings.json
+          git add FFlags/ClientAppSettings.json
           git commit -a -m "Updated FFlags"
           git push origin main
   update-fflags-fints:
@@ -48,11 +48,11 @@ jobs:
         run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
       - name: Run nodejs file
         id: update_fflags
-        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\"]}]' \"/rco-fflags/FInt and FFlag/ClientAppSettings.json\""
+        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\"]}]' \"/FInt and FFlag/ClientAppSettings.json\""
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add "rco-fflags/FInt and FFlag/ClientAppSettings.json"
+          git add "FInt and FFlag/ClientAppSettings.json"
           git commit -a -m "Updated FFlags"
           git push origin main
   update-fflags-fpsunlock:
@@ -74,11 +74,11 @@ jobs:
         run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
       - name: Run nodejs file
         id: update_fflags
-        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\"]},{\"tbl\": \"values\", \"values\": [500]}]' \"/rco-fflags/FFlag and FPS Unlock/ClientAppSettings.json\""
+        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\"]},{\"tbl\": \"values\", \"values\": [500]}]' \"/FFlag and FPS Unlock/ClientAppSettings.json\""
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add "rco-fflags/FFlag and FPS Unlock/ClientAppSettings.json"
+          git add "FFlag and FPS Unlock/ClientAppSettings.json"
           git commit -a -m "Updated FFlags"
           git push origin main
   update-fflags-fints-fstrings:
@@ -100,11 +100,11 @@ jobs:
           run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
         - name: Run nodejs file
           id: update_fflags
-          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\", \"FString\"]}]' /rco-fflags/All/ClientAppSettings.json"
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\", \"FString\"]}]' /All/ClientAppSettings.json"
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
-            git add rco-fflags/All/ClientAppSettings.json
+            git add All/ClientAppSettings.json
             git commit -a -m "Updated FFlags"
             git push origin main
   update-fflags-fstrings:
@@ -126,11 +126,11 @@ jobs:
           run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
         - name: Run nodejs file
           id: update_fflags
-          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FString\"]}]' \"/rco-fflags/FString and FFlag/ClientAppSettings.json\""
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FString\"]}]' \"/FString and FFlag/ClientAppSettings.json\""
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
-            git add "rco-fflags/FString and FFlag/ClientAppSettings.json"
+            git add "FString and FFlag/ClientAppSettings.json"
             git commit -a -m "Updated FFlags"
             git push origin main
   update-fints-fstrings:
@@ -152,11 +152,11 @@ jobs:
           run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
         - name: Run nodejs file
           id: update_fflags
-          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FString\"]}]' \"/rco-fflags/FString and FInt/ClientAppSettings.json\""
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FString\"]}]' \"/FString and FInt/ClientAppSettings.json\""
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
-            git add "rco-fflags/FString and FInt/ClientAppSettings.json"
+            git add "FString and FInt/ClientAppSettings.json"
             git commit -a -m "Updated FFlags"
             git push origin main
   update-fints:
@@ -178,11 +178,11 @@ jobs:
         run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
       - name: Run nodejs file
         id: update_fflags
-        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInts\"]}]' /rco-fflags/FInt/ClientAppSettings.json"
+        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInts\"]}]' /FInt/ClientAppSettings.json"
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add rco-fflags/FInt/ClientAppSettings.json
+          git add FInt/ClientAppSettings.json
           git commit -a -m "Updated FFlags"
           git push origin main
   update-fstrings:
@@ -204,10 +204,10 @@ jobs:
         run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
       - name: Run nodejs file
         id: update_fflags
-        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FString\"]}]' /rco-fflags/FString/ClientAppSettings.json"
+        run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FString\"]}]' /FString/ClientAppSettings.json"
       - name: Add changed file, commit and push to repo
         continue-on-error: true
         run: |
-          git add rco-fflags/FString/ClientAppSettings.json
+          git add FString/ClientAppSettings.json
           git commit -a -m "Updated FFlags"
           git push origin main
