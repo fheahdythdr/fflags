@@ -1,0 +1,12 @@
+[
+    {
+        "tbl": "includes", 
+        "values": ["FInt", "FFlag"]
+    },
+    {
+        "tbl": "custom", 
+        "values": {
+            "FFlagDebugGraphicsPreferD3D11FL10": true
+        }
+    }
+]
