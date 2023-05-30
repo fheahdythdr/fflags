@@ -36,5 +36,5 @@
         }
     }
     
-    fs.writeFileSync(output, JSON.stringify(New));
+    fs.writeFileSync(output, JSON.stringify(New, null, 2));
 })()
