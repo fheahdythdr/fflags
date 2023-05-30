@@ -221,3 +221,165 @@ jobs:
           git add FString/ClientAppSettings.json
           git commit -a -m "Updated FFlags"
           git push origin main
+  update-fflags-fints-fstrings-vulkan:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3.5.2
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v2.5.2
+        - name: Setup SSH key
+          uses: webfactory/ssh-agent@v0.8.0
+          with:
+            ssh-private-key: ${{ secrets.sshprivate }}
+        - name: Set git email
+          run: git config --global user.email ${{ secrets.gitemail }}
+        - name: Set git user
+          run: git config --global user.name ${{ secrets.gituser }}
+        - name: Clone repo
+          run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
+        - name: Run nodejs file
+          id: update_fflags
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\", \"FString\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferVulkan\": true}}]' \"/All Vulkan/ClientAppSettings.json\""
+        - name: Add changed file, commit and push to repo
+          continue-on-error: true
+          run: |
+            git pull
+            git add "All Vulkan/ClientAppSettings.json"
+            git commit -a -m "Updated FFlags"
+            git push origin main
+  update-fflags-fints-fstrings-d3d11:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3.5.2
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v2.5.2
+        - name: Setup SSH key
+          uses: webfactory/ssh-agent@v0.8.0
+          with:
+            ssh-private-key: ${{ secrets.sshprivate }}
+        - name: Set git email
+          run: git config --global user.email ${{ secrets.gitemail }}
+        - name: Set git user
+          run: git config --global user.name ${{ secrets.gituser }}
+        - name: Clone repo
+          run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
+        - name: Run nodejs file
+          id: update_fflags
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\", \"FString\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferD3D11\": true}}]' \"/All D3D11/ClientAppSettings.json\""
+        - name: Add changed file, commit and push to repo
+          continue-on-error: true
+          run: |
+            git pull
+            git add "All D3D11/ClientAppSettings.json"
+            git commit -a -m "Updated FFlags"
+            git push origin main
+  update-fflags-fints-fstrings-d3d10:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3.5.2
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v2.5.2
+        - name: Setup SSH key
+          uses: webfactory/ssh-agent@v0.8.0
+          with:
+            ssh-private-key: ${{ secrets.sshprivate }}
+        - name: Set git email
+          run: git config --global user.email ${{ secrets.gitemail }}
+        - name: Set git user
+          run: git config --global user.name ${{ secrets.gituser }}
+        - name: Clone repo
+          run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
+        - name: Run nodejs file
+          id: update_fflags
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\", \"FString\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferD3D11FL10\": true}}]' \"/All D3D10/ClientAppSettings.json\""
+        - name: Add changed file, commit and push to repo
+          continue-on-error: true
+          run: |
+            git pull
+            git add All D3D10/ClientAppSettings.json
+            git commit -a -m "Updated FFlags"
+            git push origin main
+  update-fflags-fints-vulkan:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3.5.2
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v2.5.2
+        - name: Setup SSH key
+          uses: webfactory/ssh-agent@v0.8.0
+          with:
+            ssh-private-key: ${{ secrets.sshprivate }}
+        - name: Set git email
+          run: git config --global user.email ${{ secrets.gitemail }}
+        - name: Set git user
+          run: git config --global user.name ${{ secrets.gituser }}
+        - name: Clone repo
+          run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
+        - name: Run nodejs file
+          id: update_fflags
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FFlag\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferVulkan\": true}}]' \"/FString and FInt Vulkan/ClientAppSettings.json\""
+        - name: Add changed file, commit and push to repo
+          continue-on-error: true
+          run: |
+            git pull
+            git add "FString and FInt Vulkan/ClientAppSettings.json"
+            git commit -a -m "Updated FFlags"
+            git push origin main
+  update-fflags-fints-d3d11:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3.5.2
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v2.5.2
+        - name: Setup SSH key
+          uses: webfactory/ssh-agent@v0.8.0
+          with:
+            ssh-private-key: ${{ secrets.sshprivate }}
+        - name: Set git email
+          run: git config --global user.email ${{ secrets.gitemail }}
+        - name: Set git user
+          run: git config --global user.name ${{ secrets.gituser }}
+        - name: Clone repo
+          run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
+        - name: Run nodejs file
+          id: update_fflags
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FFlag\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferD3D11\": true}}]' \"/FString and FInt D3D11/ClientAppSettings.json\""
+        - name: Add changed file, commit and push to repo
+          continue-on-error: true
+          run: |
+            git pull
+            git add "FString and FInt D3D11/ClientAppSettings.json"
+            git commit -a -m "Updated FFlags"
+            git push origin main
+  update-fflags-fints-d3d10:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v3.5.2
+        - name: Setup Node.js environment
+          uses: actions/setup-node@v2.5.2
+        - name: Setup SSH key
+          uses: webfactory/ssh-agent@v0.8.0
+          with:
+            ssh-private-key: ${{ secrets.sshprivate }}
+        - name: Set git email
+          run: git config --global user.email ${{ secrets.gitemail }}
+        - name: Set git user
+          run: git config --global user.name ${{ secrets.gituser }}
+        - name: Clone repo
+          run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
+        - name: Run nodejs file
+          id: update_fflags
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FFlag\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferD3D11FL10\": true}}]' \"/FString and FInt D3D10/ClientAppSettings.json\""
+        - name: Add changed file, commit and push to repo
+          continue-on-error: true
+          run: |
+            git pull
+            git add "FString and FInt D3D10/ClientAppSettings.json"
+            git commit -a -m "Updated FFlags"
+            git push origin main
