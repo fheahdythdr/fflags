@@ -34,5 +34,5 @@
         }
     }
     
-    fs.writeFileSync(__dirname + "/ClientAppSettings.json", JSON.stringify(New));
+    fs.writeFileSync(__dirname + "/ClientAppSettings.json", JSON.stringify(New, null, 4));
 })()
