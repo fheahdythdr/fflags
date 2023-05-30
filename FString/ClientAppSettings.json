@@ -1,1 +1,20 @@
-{"FStringNewInGameMenuForcedUserIds":"2323539704;3822626535;4126963942;2627408279;4329723352","FStringImmersiveAdsUniverseWhitelist":"0","DFStringAnalyticsEventStreamUrlEndpoint":"opt-out","DFStringAltHttpPointsReporterUrl":"https://opt-out.roblox.com","DFStringAltTelegrafHTTPTransportUrl":"http://opt-out.roblox.com","DFStringTelegrafHTTPTransportUrl":"https://opt-out.roblox.com","DFStringLmsRecipeEndpoint":"/opt-out","DFStringLmsReportEndpoint":"/opt-out","DFStringLightstepHTTPTransportUrlHost":"https://opt-out.roblox.com","DFStringLightstepHTTPTransportUrlPath":"/opt-out","DFStringLightstepToken":"opt-out","DFStringHttpPointsReporterUrl":"https://opt-out.roblox.com","DFStringCrashUploadToBacktraceBaseUrl":"https://opt-out.roblox.com","FStringErrorUploadToBacktraceBaseUrl":"https://opt-out.roblox.com","DFStringRobloxAnalyticsSubDomain":"opt-out","DFStringRobloxAnalyticsURL":"https://opt-out.roblox.com","DFStringAnalyticsNS1ApplicationId":"opt-out","DFStringAnalyticsNS1BeaconConfig":"https://opt-out.roblox.com"}
+{
+  "FStringNewInGameMenuForcedUserIds": "2323539704;3822626535;4126963942;2627408279;4329723352",
+  "FStringImmersiveAdsUniverseWhitelist": "0",
+  "DFStringAnalyticsEventStreamUrlEndpoint": "opt-out",
+  "DFStringAltHttpPointsReporterUrl": "https://opt-out.roblox.com",
+  "DFStringAltTelegrafHTTPTransportUrl": "http://opt-out.roblox.com",
+  "DFStringTelegrafHTTPTransportUrl": "https://opt-out.roblox.com",
+  "DFStringLmsRecipeEndpoint": "/opt-out",
+  "DFStringLmsReportEndpoint": "/opt-out",
+  "DFStringLightstepHTTPTransportUrlHost": "https://opt-out.roblox.com",
+  "DFStringLightstepHTTPTransportUrlPath": "/opt-out",
+  "DFStringLightstepToken": "opt-out",
+  "DFStringHttpPointsReporterUrl": "https://opt-out.roblox.com",
+  "DFStringCrashUploadToBacktraceBaseUrl": "https://opt-out.roblox.com",
+  "FStringErrorUploadToBacktraceBaseUrl": "https://opt-out.roblox.com",
+  "DFStringRobloxAnalyticsSubDomain": "opt-out",
+  "DFStringRobloxAnalyticsURL": "https://opt-out.roblox.com",
+  "DFStringAnalyticsNS1ApplicationId": "opt-out",
+  "DFStringAnalyticsNS1BeaconConfig": "https://opt-out.roblox.com"
+}
