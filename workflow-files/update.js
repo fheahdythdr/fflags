@@ -8,11 +8,15 @@
     const includes = [];
     const custom = [];
     for (const item1 of adder) {
-        for (const item2 of item1.values) {
-            if (item1.tbl == "names") names.push(item2);
-            else if (item1.tbl == "values") values.push(item2);
-            else if (item1.tbl == "includes") includes.push(item2);
-            else if (item1.tbl == "custom") custom.push(item2)
+        if (item1.values.length) {
+            for (const item2 of item1.values) {
+                if (item1.tbl == "names") names.push(item2);
+                else if (item1.tbl == "values") values.push(item2);
+                else if (item1.tbl == "includes") includes.push(item2);
+            }
+        }
+        else {
+            custom.push(item1.values);
         }
     }
     const fs = require('fs')
