@@ -6,11 +6,13 @@
     const names = [];
     const values = [];
     const includes = [];
+    const custom = [];
     for (const item1 of adder) {
         for (const item2 of item1.values) {
             if (item1.tbl == "names") names.push(item2);
             else if (item1.tbl == "values") values.push(item2);
             else if (item1.tbl == "includes") includes.push(item2);
+            else if (item1.tbl == "custom") custom.push(item2)
         }
     }
     const fs = require('fs')
@@ -23,5 +25,12 @@
             New[name] = Settings[name];
         }
     }
+    
+    for (const item of custom) {
+        for (const name of Object.keys(item)) {
+            New[name] = item[name];   
+        }
+    }
+    
     fs.writeFileSync(output, JSON.stringify(New));
 })()
