@@ -14,3 +14,7 @@ if you want to make a custom one for other settings, go to this repo's create-cu
 then, just run it and it'll create a ClientAppSettings.json containing whatever you specified it to get.
 
 from there, if you want to use it, create a custom repo and upload it to there, then input the raw url pointing to your custom ClientAppSettings.json into RCO
+
+alternatively, input the url file:///path/to/json/file (ex. file:///C:\RCO2\custom_settings.json)
+
+find all the extra fvariables not included in L8X's ClientAppSettings.json [here](https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/roblox/FVariables.txt)
