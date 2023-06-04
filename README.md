@@ -17,4 +17,8 @@ from there, if you want to use it, create a custom repo and upload it to there, 
 
 alternatively, input the url file:///path/to/json/file (ex. file:///C:\RCO2\custom_settings.json)
 
-find all the extra fvariables not included in L8X's ClientAppSettings.json [here](https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/roblox/FVariables.txt)
+find all the extra fvariables not included in ~~L8X's~~ the ClientAppSettings.json [here](https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/roblox/FVariables.txt)
+
+l8x is no longer trusted by the RCO community so i've removed all auto-updating of the fflags.
+
+you will have to manually find optimizing variables at the link above or within the [RBXFlags org](https://github.com/rbxflags)
