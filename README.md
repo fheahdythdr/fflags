@@ -19,12 +19,4 @@ alternatively, input the url file:///path/to/json/file (ex. file:///C:\RCO2\cust
 
 find all the extra fvariables not included in ~~L8X's~~ the ClientAppSettings.json [here](https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/roblox/FVariables.txt)
 
-l8x is no longer trusted by the RCO community so i've removed all auto-updating of the fflags.
-
-you will have to manually find optimizing variables at the link above or within the [RBXFlags org](https://github.com/rbxflags)
-
-if you want to remove the original RCO, [use this](https://github.com/Knewest/Remove-RCO2.exe-Completely)
-
-i am not entirely sure what makes it be considered compromised, however my code should hopefully still be safe.
-
-if you do not trust it, manually add the FFlags to your roblox dir
+i'm not sure if the main rco2 is compromised anymore, but keep an eye out
