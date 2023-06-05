@@ -18,5 +18,3 @@ from there, if you want to use it, create a custom repo and upload it to there, 
 alternatively, input the url file:///path/to/json/file (ex. file:///C:\RCO2\custom_settings.json)
 
 find all the extra fvariables not included in ~~L8X's~~ the ClientAppSettings.json [here](https://github.com/MaximumADHD/Roblox-Client-Tracker/blob/roblox/FVariables.txt)
-
-i'm not sure if the main rco2 is compromised anymore, but keep an eye out
