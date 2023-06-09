@@ -299,7 +299,7 @@ jobs:
           continue-on-error: true
           run: |
             git pull
-            git add All D3D10/ClientAppSettings.json
+            git add "All D3D10/ClientAppSettings.json"
             git commit -a -m "Updated FFlags"
             git push origin main
   update-fflags-fints-vulkan:
