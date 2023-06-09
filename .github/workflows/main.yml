@@ -240,7 +240,7 @@ jobs:
           run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
         - name: Run nodejs file
           id: update_fflags
-          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\", \"FString\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferVulkan\": true}}]' \"/All Vulkan/ClientAppSettings.json\""
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\", \"FString\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferVulkan\": true, \"FFlagDebugGraphicsDisableDirect3D11\": true}}]' \"/All Vulkan/ClientAppSettings.json\""
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
@@ -267,7 +267,7 @@ jobs:
           run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
         - name: Run nodejs file
           id: update_fflags
-          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\", \"FString\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferD3D11\": true}}]' \"/All D3D11/ClientAppSettings.json\""
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\", \"FString\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferD3D11\": true, \"FFlagDebugGraphicsDisableDirect3D11\": false}}]' \"/All D3D11/ClientAppSettings.json\""
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
@@ -294,7 +294,7 @@ jobs:
           run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
         - name: Run nodejs file
           id: update_fflags
-          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\", \"FString\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferD3D11FL10\": true}}]' \"/All D3D10/ClientAppSettings.json\""
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FFlag\", \"FInt\", \"FString\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferD3D11FL10\": true, \"FFlagDebugGraphicsDisableDirect3D11\": true}}]' \"/All D3D10/ClientAppSettings.json\""
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
@@ -321,7 +321,7 @@ jobs:
           run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
         - name: Run nodejs file
           id: update_fflags
-          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FFlag\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferVulkan\": true}}]' \"/FInt and FFlag Vulkan/ClientAppSettings.json\""
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FFlag\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferVulkan\": true, \"FFlagDebugGraphicsDisableDirect3D11\": true}}]' \"/FInt and FFlag Vulkan/ClientAppSettings.json\""
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
@@ -348,7 +348,7 @@ jobs:
           run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
         - name: Run nodejs file
           id: update_fflags
-          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FFlag\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferD3D11\": true}}]' \"/FInt and FFlag D3D11/ClientAppSettings.json\""
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FFlag\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferD3D11\": true, \"FFlagDebugGraphicsDisableDirect3D11\": false}}]' \"/FInt and FFlag D3D11/ClientAppSettings.json\""
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
@@ -375,7 +375,7 @@ jobs:
           run: git clone git@github.com:fheahdythdr/rco-but-it-uses-different-fflags
         - name: Run nodejs file
           id: update_fflags
-          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FFlag\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferD3D11FL10\": true}}]' \"/FInt and FFlag D3D10/ClientAppSettings.json\""
+          run: "node ./workflow-files/update '[{\"tbl\": \"includes\", \"values\": [\"FInt\", \"FFlag\"]},{\"tbl\": \"custom\", \"values\": {\"FFlagDebugGraphicsPreferD3D11FL10\": true, \"FFlagDebugGraphicsDisableDirect3D11\": true}}]' \"/FInt and FFlag D3D10/ClientAppSettings.json\""
         - name: Add changed file, commit and push to repo
           continue-on-error: true
           run: |
