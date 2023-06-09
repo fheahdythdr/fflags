@@ -326,7 +326,7 @@ jobs:
           continue-on-error: true
           run: |
             git pull
-            git add "FString and FInt Vulkan/ClientAppSettings.json"
+            git add "FInt and FFlag Vulkan/ClientAppSettings.json"
             git commit -a -m "Updated FFlags"
             git push origin main
   update-fflags-fints-d3d11:
@@ -353,7 +353,7 @@ jobs:
           continue-on-error: true
           run: |
             git pull
-            git add "FString and FInt D3D11/ClientAppSettings.json"
+            git add "FInt and FFlag D3D11/ClientAppSettings.json"
             git commit -a -m "Updated FFlags"
             git push origin main
   update-fflags-fints-d3d10:
@@ -380,6 +380,6 @@ jobs:
           continue-on-error: true
           run: |
             git pull
-            git add "FString and FInt D3D10/ClientAppSettings.json"
+            git add "FInt and FFlag D3D10/ClientAppSettings.json"
             git commit -a -m "Updated FFlags"
             git push origin main
