@@ -79,5 +79,6 @@
   "DFFlagNewInferredCrashTelemetrySystem": false,
   "DFFlagNewPackageAnalytics": false,
   "DFFlagPathfindingLinkAnalytics2": false,
-  "FFlagDebugGraphicsPreferD3D11": true
+  "FFlagDebugGraphicsPreferD3D11": true,
+  "FFlagDebugGraphicsDisableDirect3D11": false
 }
