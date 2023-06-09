@@ -18,7 +18,7 @@
         }
         
     }
-    const data = await fetch("https://roblox-client-optimizer.simulhost.com/ClientAppSettings.json")
+    const data = await fetch("https://raw.githubusercontent.com/fheahdythdr/fflags/main/All/ClientAppSettings.json")
     const Settings = await data.json()
     const New = {};
     for (const name of Object.keys(Settings)) {
