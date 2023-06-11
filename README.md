@@ -1,7 +1,7 @@
 # rco-fflags
 fflag configurations
 
-to use them, type url in cfo fork, then enter the url after being prompted to, ex. https://raw.githubusercontent.com/fheahdythdr/fflags/main/FFlag%20and%20FPS%20Unlock/ClientAppSettings.json
+to use them, type url in cfo, then enter the url after being prompted to, ex. https://raw.githubusercontent.com/fheahdythdr/fflags/main/FFlag%20and%20FPS%20Unlock/ClientAppSettings.json
 
 got no idea why my old main got added as a contributor, but i guess it's here now
 
